@@ -137,3 +137,28 @@ input:focus:-ms-input-placeholder
 {
     color: #428C42;
 }
+
+.square
+{
+	float: left;
+	width: 18%;
+	background-color: #ebcb7a;
+	text-align: center;
+	margin: 18px;
+	color: #fff;
+	border: 1px solid #fff;
+	font-size: 30px;
+	border-radius: 5px;
+}
+
+.square:hover
+{
+	background-color: #daba60;
+	cursor:pointer;
+}	
+	
+
+
+
+
+
