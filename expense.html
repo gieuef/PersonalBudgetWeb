@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>Budżet osobisty</title>
+	
+	<meta name="description" content="Aplikacja do prowadzenia budżetu osobistego" />
+	<meta name="keywords" content="budżet osobisty, wydatki, planowanie budżetu, oszczędzanie" />
+	
+	<link  href="style.css" rel="stylesheet" type="text/css" />
+	<link  href="css/fontello.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+	<div class="wrapper" >
+		<div class="header">
+			
+			<div class="logo">
+			<span style="color: #daa520">Pełny</span>Portfel.com
+			</div>
+			
+				<div class="square"><i class="icon-dollar"></i> <br/>Dodaj przychód</div>
+				<div class="square"><i class="icon-basket"></i> <br/>Dodaj wydatek</div>
+				<div class="square"><i class="icon-chart-pie"></i> <br/>Przeglądaj bilans</div>
+				<div class="square"><i class="icon-cogs"></i> <br/>Ustawienia</div>
+				<div class="square"><i class="icon-logout"></i> <br/>Wyloguj się</div>
+				<div style="clear:both;"></div>
+			
+		</div>
+		
+			<div class="formfield">
+				<h2>DODAJ WYDATEK</h2>
+				
+					<form action="expense.php" method="post" enctype="multipart/form-data">
+						
+						<div class="row">
+							<label> Kwota <input type="number" name="kwota" step="0.01"></label>
+						</div>
+						
+						<div class="row">
+							<label> Data <input type="date" name="dzien" id="today" ></label>
+						</div>						
+										
+						<script>
+						document.getElementById('today').value = new Date().toISOString().substring(0, 10);
+						</script>
+						
+						<div class="row"> Sposób płatności:
+							<div><label><input type="radio" value="1" name="platnosc" checked> Gotówka </label></div>
+							<div><label><input type="radio" value="2" name="platnosc"> Karta debetowa </label></div>
+							<div><label><input type="radio" value="3" name="platnosc"> Karta kredytowa </label></div>
+						</div>
+						
+						<div class="row"> 
+							<label for="kat"> Kategoria: </label>
+								<select id="kat" name="kat">
+					
+									<option value="" selected>Jedzenie</option>
+									<option value="" >Mieszkanie</option>
+									<option value="">Transport</option>
+									<option value="">Telekomunikacja</option>
+									<option value="">Opieka zdrowotna</option>
+									<option value="">Ubranie</option>
+									<option value="">Higiena</option>
+									<option value="">Dzieci</option>
+									<option value="">Rozrywka</option>
+									<option value="">Wycieczka</option>
+									<option value="">Szkolenia</option>
+									<option value="">Książki</option>
+									<option value="">Oszczędności</option>
+									<option value="">Na złotą jesień, czyli emeryturę</option>
+									<option value="">Spłata długów</option>
+									<option value="">Darowizna</option>
+									<option value="">Inne wydatki</option>
+					
+					</select>
+						</div>
+						
+						<div class="row">
+							<div><label for="komentarz"> Komentarz(opcjonalnie): </label></div>
+								<textarea name="komentarz" id="komentarz" rows="4" cols="80" ></textarea>
+						</div>
+						
+						<div class="row">
+					<button class="btn" type="submit">Zapisz</button>
+					<button class="btn" type="reset">Anuluj</button>
+				
+				</div>
+				
+					</form>
+			</div>
+		
+		<div class="footer">Pełnyportfel.com &copy; 2020 </div>
+		
+	</div>
+	
+</body>
+</html>
